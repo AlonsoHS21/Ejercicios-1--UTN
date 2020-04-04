@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1586042092 source:c:\users\alons\desktop\utn 2c\laboratorio de computacion ii\repaso lab ii\tp1repaso\main.cpp
+	<iostream>
+	<cstdlib>
+	"funcionrepaso2.h"
+
+1586041661 c:\users\alons\desktop\utn 2c\laboratorio de computacion ii\repaso lab ii\tp1repaso\funcionrepaso2.h
+
