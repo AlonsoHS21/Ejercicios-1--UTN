@@ -102,6 +102,136 @@ int Punto7vec(int *vec7,int tam,int *cantidad)
     }
     return contcant;
 }
+int Punto1mat(int mat1[2][2],int *num)
+{
+    int maximo;
+    int bandera = 0;
+    for(int x = 0;x<2;x++)
+    {
+        for(int y = 0;y<2;y++)
+        {
+           if(mat1[*num][y] > maximo || bandera == 0)
+           {
+               bandera = 1;
+               maximo = mat1[*num][y];
+           }
+        }
+    }
+    return maximo;
+}
+int Punto2mat(int mat2[2][2],int *num)
+{
+    int posicion,maximo;
+    int bandera = 0;
+        for(int y=0;y<2;y++)
+        {
+            if(mat2[*num][y] > maximo || bandera == 0)
+            {
+                bandera = 1;
+                maximo = mat2[*num][y];
+                posicion = y;
+            }
+        }
+    return posicion;
+}
+int Punto3mat(int mat[2][2],int *num)
+{
+    int sumatotal = 0;
+    for(int x=0;x<2;x++)
+    {
+        sumatotal += mat[x][*num];
+    }
+    return sumatotal;
+}
+int Punto4mat(int mat[2][2],int *num)
+{
+    int positivos = 0;
+    for(int x=0;x<2;x++)
+    {
+        if(mat[x][*num] > 0 )
+        {
+            positivos++;
+        }
+    }
+    return positivos;
+}
+int Punto5mat(int mat[2][2])
+{
+    int total = 0;
+    for(int x=0;x<2;x++)
+    {
+        for(int y =0;y<2;y++)
+        {
+            total += mat[x][y];
+        }
+    }
+    return total;
+}
+void Ejercicioscombinados1(int sucursalmat[5][3])
+{
+    int Numero_articulo,Numero_sucursal,cantidad_vendida;
+    cout<<"----------------------------------------------"<<endl;
+    cout<<" Ingrese el N° de articulo ( 1 a 5 ): ";
+    cin>>Numero_articulo;
+    while(Numero_articulo!=0)
+    {
+        cout<<" Ingrese la sucursal de venta ( 1 a 3): ";
+        cin>>Numero_sucursal;
+        cout<<" Ingrese la cantidad vendida: ";
+        cin>>cantidad_vendida;
+        sucursalmat[Numero_articulo-1][Numero_sucursal-1] += cantidad_vendida;
+        cout<<"----------------------------------------------"<<endl;
+        cout<<endl;
+        cout<<"----------------------------------------------"<<endl;
+        cout<<" Ingrese en N° de articulo ( 1 a 5 ): ";
+        cin>>Numero_articulo;
+    }
+}
+void PuntoAcombi(int mat[5][3])
+{
+    for(int x=0;x<5;x++)
+    {
+        for(int y=0;y<3;y++)
+        {
+            if(mat[x][y]!=0)
+            {
+                cout<<endl;
+                cout<<"--------------------------------------------------------------------------------"<<endl;
+                cout<<" Articulo "<<x+1<<" - "<<"Sucursal "<<y+1<<" - "<<" cantidad vendida: "<<mat[x][y]<<endl;
+                cout<<"--------------------------------------------------------------------------------"<<endl;
+            }
 
+        }
+    }
+}
+void PuntoBcombi(int mat[5][3])
+{
+    int sucursal[3] = {0};
+    bool bandera = 0;
+    for(int x=0;x<5;x++)
+    {
+        for(int y=0;y<3;y++)
+        {
+            if(mat[x][y] > sucursal[y] || bandera ==0)
+            {
+                bandera = 1;
+                sucursal[y] = mat[x][y];
+            }
+
+        }
+    }
+    cout<<endl;
+        cout<<"-----------------------------------------------------------"<<endl;
+        cout<<"                          PUNTO B                          "<<endl;
+    for(int x=0;x<3;x++)
+    {
+        if(sucursal[x]!=0)
+        {
+            cout<<"--------------------------------------------------------------"<<endl;
+            cout<<" Para la sucursal "<<x+1<<" el maximo fue de: "<<sucursal[x]<<endl;
+        }
+
+    }
+}
 
 #endif // FUNCIONREPASO2_H_INCLUDED

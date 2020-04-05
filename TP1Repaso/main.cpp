@@ -168,6 +168,184 @@ int main()
 
 
             }break;
+                    case 2:
+                        {
+                            system("cls");
+                            int mat[2][2] = {{1,2},{-1,10}};
+                            bool salirmatriz = false;
+                            while(!salirmatriz)
+                            {
+                            system("cls");
+                            char opmatriz;
+                            cout<<"---------------------------------------"<<endl;
+                            cout<<"          MENU DE MATRICES             "<<endl;
+                            cout<<"---------------------------------------"<<endl;
+                            cout<<" A - MAXIMO DE LA FILA INDICADA        "<<endl;
+                            cout<<" B - POSICION MAXIMO EN LA FILA        "<<endl;
+                            cout<<" C - SUMA DE LAS COLUMNAS              "<<endl;
+                            cout<<" D - CANTIDADS NUMEROS POSITIVOS       "<<endl;
+                            cout<<" E - SUMA DE TODA LA MATRIZ            "<<endl;
+                            cout<<"---------------------------------------"<<endl;
+                            cout<<" F - SALIR AL MENU PRINCIPAL           "<<endl;
+                            cout<<"---------------------------------------"<<endl;
+                            cout<<" ELIJE UNA OPCION: ";
+                            cin>>opmatriz;
+                            cout<<"---------------------------------------"<<endl;
+                            cin.get();
+                            switch(opmatriz)
+                            {
+                            case 'A':
+                            case 'a':
+                                {
+                                    system("cls");
+                                    int numfila1,maximofila;
+                                    cout<<"Ingrese un numero entre el 0 y el 1 para buscar el maximo de la fila: ";
+                                    cin>>numfila1;
+                                    maximofila = Punto1mat(mat,&numfila1);
+                                    cout<<"---------------------------------------------------------------------------"<<endl;
+                                    cout<<"El maximo numero del la matriz en la fila "<<numfila1<<" es: "<<maximofila;
+                                    cin.ignore();
+                                    cin.get();
+                                }break;
+                            case 'B':
+                            case 'b':
+                                {
+                                    system("cls");
+                                    int numfila2,posmaximofila;
+                                    cout<<"Ingrese un numero entre el 0 y el 1 para buscar la posicion del maximo de la fila: ";
+                                    cin>>numfila2;
+                                    posmaximofila = Punto1mat(mat,&numfila2);
+                                    cout<<"----------------------------------------------------------------------------------"<<endl;
+                                    cout<<" La posicion del maximo numero de la matriz "<<endl;
+                                    cout<<" FILA: "<<numfila2<<endl;
+                                    cout<<" COLUMNA "<<posmaximofila;
+                                    cin.ignore();
+                                    cin.get();
+
+                                }break;
+                            case 'C':
+                            case 'c':
+                                {
+                                    system("cls");
+                                    int numcolum1,sumatotal;
+                                    cout<<endl;
+                                    cout<<" Ingrese un numero entre 0 y 1 que indique la columna para sumas los elementos: ";
+                                    cin>>numcolum1;
+                                    sumatotal = Punto3mat(mat,&numcolum1);
+                                    cout<<"------------------------------------------------------------------------"<<endl;
+                                    cout<<" La suma de todos los elementos de la columna de la matriz es de : "<<sumatotal<<endl;
+                                    cin.ignore();
+                                    cin.get();
+                                }break;
+                            case 'D':
+                            case 'd':
+                                {
+                                    system("cls");
+                                    cout<<endl;
+                                    int numcolum2;
+                                    cout<<" Ingrese un numero entre 0 y 1 para indicar a que parte de la columna va a mostrar la cantidad de positivos: ";
+                                    cin>>numcolum2;
+                                    int positivos = Punto4mat(mat,&numcolum2);
+                                    cout<<"----------------------------------------------------------------------------------------"<<endl;
+                                    cout<<" La cantidad de componentes positivos de la columna indicada es : "<<positivos<<endl;
+                                    cin.ignore();
+                                    cin.get();
+                                }break;
+                            case 'e':
+                            case 'E':
+                                {
+                                    system("cls");
+                                    int total = Punto5mat(mat);
+                                    cout<<endl;
+                                    cout<<"------------------------------------------------------------------"<<endl;
+                                    cout<<" La suma de todos los elementos de la matriz es : "<<total<<endl;
+                                    cout<<"------------------------------------------------------------------"<<endl;
+                                    cin.ignore();
+                                    cin.get();
+                                }break;
+                            case 'F':
+                            case 'f':
+                                {
+                                    salirmatriz = true;
+
+                                }break;
+                            default:
+                                {
+                                    system("cls");
+                                    cout<<endl;
+                                    cout<<"---------------------------"<<endl;
+                                    cout<<" --- CODIGO INCORRECTO --- "<<endl;
+                                    cout<<"---------------------------"<<endl;
+                                    cin.ignore();
+                                    cin.get();
+                                }break;
+                            }
+                        }
+                    }break;
+                            case 3:
+                                {
+                                    system("cls");
+                                    char opcombinados;
+                                    bool salircombinados = false;
+                                    while(!salircombinados)
+                                    {
+                                        system("cls");
+                                        cout<<endl;
+                                        cout<<"----------------------------------------------------------------------"<<endl;
+                                        cout<<" A - UNA EMPRESA VENDE 5 DIFERENTES TIPO DE ARTICULOS EN 3 SUCURSALES "<<endl;
+                                        cout<<"----------------------------------------------------------------------"<<endl;
+                                        cout<<" E - SALIR DEL PROGRAMA                                               "<<endl;
+                                        cout<<"----------------------------------------------------------------------"<<endl;
+                                        cout<<" ELIJE UNA OPCION: ";
+                                        cin>>opcombinados;
+                                        cin.get();
+                                        switch(opcombinados)
+                                        {
+                                        case 'A':
+                                        case 'a':
+                                            {
+                                                system("cls");
+                                                int sucursalmat[5][3] = {0};
+                                                Ejercicioscombinados1(sucursalmat);
+                                                PuntoAcombi(sucursalmat);
+                                                PuntoBcombi(sucursalmat);
+                                                cin.ignore();
+                                                cin.get();
+                                            }break;
+                                        case 'B':
+                                        case 'b':
+                                            {
+
+                                            }break;
+                                        case 'C':
+                                        case 'c':
+                                            {
+
+                                            }break;
+                                        case 'D':
+                                        case 'd':
+                                            {
+
+                                            }break;
+                                        case 'E':
+                                        case 'e':
+                                            {
+                                                salircombinados = true;
+                                            }break;
+                                        default:
+                                            {
+                                                system("cls");
+                                                cout<<endl;
+                                                cout<<"---------------------------"<<endl;
+                                                cout<<" --- CODIGO INCORRECTO --- "<<endl;
+                                                cout<<"---------------------------"<<endl;
+                                                cin.ignore();
+                                                cin.get();
+                                            }break;
+                                        }
+                                    }
+
+                                }break;
                 case 4:
                         {
                             system("cls");
