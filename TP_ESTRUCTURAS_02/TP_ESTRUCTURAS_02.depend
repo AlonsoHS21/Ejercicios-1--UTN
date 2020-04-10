@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1586454361 source:c:\users\alons\desktop\utn 2c\laboratorio de computacion ii\estructuras\tp estructura\tp_estructuras_02\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<clocale>
+	"funcion.h"
+	"funcionproducto.h"
+
+1586486898 c:\users\alons\desktop\utn 2c\laboratorio de computacion ii\estructuras\tp estructura\tp_estructuras_02\funcion.h
+
+1586454527 c:\users\alons\desktop\utn 2c\laboratorio de computacion ii\estructuras\tp estructura\tp_estructuras_02\funcionproducto.h
+
