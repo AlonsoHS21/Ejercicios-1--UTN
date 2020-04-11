@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1586557535 source:c:\users\alons\desktop\utn 2c\porgramacion ii\tp 1 variables y funciones\tp1repasovariablesyfunciones\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<clocale>
+	"funcionmateria.h"
+	"funcionalumnos.h"
+	"funcionrespuestas.h"
+
+1586557629 c:\users\alons\desktop\utn 2c\porgramacion ii\tp 1 variables y funciones\tp1repasovariablesyfunciones\funcionmateria.h
+
+1586546699 c:\users\alons\desktop\utn 2c\porgramacion ii\tp 1 variables y funciones\tp1repasovariablesyfunciones\funcionalumnos.h
+
+1586557957 c:\users\alons\desktop\utn 2c\porgramacion ii\tp 1 variables y funciones\tp1repasovariablesyfunciones\funcionrespuestas.h
+
